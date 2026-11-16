@@ -1,7 +1,7 @@
 # Module 3 Playbook Submission — Service Request Portal
 
 **Name:** [David Darus]
-**Live URL:** [dpd-vbc-m3-starter.netlify.app]
+**Live URL:** [https://dpd-vbc-m3-starter.netlify.app]
 **Repo:** [(https://github.com/darusdp/vbc-m3-starter)]
 
 ## What I built
