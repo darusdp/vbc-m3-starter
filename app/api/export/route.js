@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    return new Response(toCsv(listRequests()), {
+    return new Response(toCsv(await listRequests()), {
       status: 200,
       headers: {
         "Content-Type": "text/csv; charset=utf-8",

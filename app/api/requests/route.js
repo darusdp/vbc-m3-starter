@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    return NextResponse.json({ requests: listRequests() }, { status: 200 });
+    return NextResponse.json({ requests: await listRequests() }, { status: 200 });
   } catch (error) {
     console.error("GET /api/requests failed:", error);
     return NextResponse.json(
@@ -32,7 +32,7 @@ export async function POST(req) {
       return NextResponse.json({ error: result.error }, { status: 400 });
     }
 
-    const request = createRequest(result.value);
+    const request = await createRequest(result.value);
     return NextResponse.json({ request }, { status: 201 });
   } catch (error) {
     console.error("POST /api/requests failed:", error);

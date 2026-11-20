@@ -32,7 +32,7 @@ export async function PATCH(req, { params }) {
       );
     }
 
-    const request = updateRequestStatus(id, status);
+    const request = await updateRequestStatus(id, status);
     if (!request) {
       return NextResponse.json(
         { error: `No request found with id ${id}.` },
